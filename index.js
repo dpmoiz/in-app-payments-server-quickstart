@@ -47,7 +47,7 @@ app.post('/chargeForCookie', async (request, response) => {
       "autocomplete": true,
     };
     const createPaymentResponse = await paymentsApi.createPayment(createPaymentRequest);
-    console.log(createPaymentResponse.payment);
+    console.log( "Response from card payment RWS" + createPaymentResponse.payment);
 
     response.status(200).json(createPaymentResponse.payment);
   } catch (e) {
